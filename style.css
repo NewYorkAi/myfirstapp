@@ -1,0 +1,110 @@
+body {
+    background-color: #e0f7fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+#controls-top,
+#controls-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.cell.win {
+    background-color: lightgreen;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#game-message {
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+#scoreboard {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#game-result {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#congratulations {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+}
+
+/* Style for stars */
+.star {
+    color: gold;
+    font-size: 25px;
+}
+
+/* In your CSS file */
+#game-result {
+    opacity: 0;
+    /* ... other styles ... */
+    transition: opacity 0.5s ease;
+}
+
+#game-result.show {
+    opacity: 1;
+}
